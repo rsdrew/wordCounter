@@ -43,7 +43,7 @@ h1 {
 .content {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 2fr 2fr 1fr 1fr 1fr;
-    grid-template-rows: 1fr 1fr 3fr 1fr;
+    grid-template-rows: .2fr 1fr .2fr 1fr;
     grid-template-areas:
         '. . text text . . . .'
         '. . . textbox textbox . . .'
@@ -62,17 +62,28 @@ h1 {
     grid-area: textbox;
     width: 100%;
     height: 100%;
-
 }
 
 #text {
     width: 100%;
-    resize: vertical;
-
+    resize: none;
 }
 
 .word-count {
     grid-area: wordcount;
+}
+
+.number-wrapper {
+    grid-area: number;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 88px;
+    margin-top: 0;
+}
+
+#number {
+    margin: 0;
 }
 
 .footer {
