@@ -10,16 +10,24 @@ body {
 }
 
 h1 {
-    font-size: 100px;
+    font-size: 7.5em;
     margin-top: 35px;
     margin-bottom: 0px;
 }
 
+h2 {
+    margin: 10px 0;
+}
+
+h3 {
+    margin: 0;
+}
+
 .container {
     display: grid;
+    grid-template-rows: 2fr 7fr 1fr;
     height: 100%;
     width: 100%;
-    grid-template-rows: 200px auto 10%;
 }
 
 .header {
@@ -53,8 +61,10 @@ h1 {
 
 .text-description {
     position: relative;
-    left: 20%;
+    left: 15%;
     grid-area: text;
+    font-size: 35px;
+    margin: 5% 0;
 }
 
 .text-box {
@@ -77,17 +87,22 @@ h1 {
     grid-area: wordcount;
 }
 
+#word-count {
+    margin: 5% 0;
+    font-size: 20px;
+    font-weight: bold;
+}
+
 .number-wrapper {
     grid-area: number;
     display: flex;
     justify-content: center;
-    font-size: 88px;
     margin-top: 0;
 }
 
 #number {
     margin: 0;
-    font-size: 200px;
+    font-size: 190px;
     color: #0081A7;
 }
 
@@ -99,3 +114,26 @@ h1 {
     color: #FDFCDC;
     font-size: 50px;
 }
+
+@media only screen and (max-width: 700px) {
+    h1 {
+        font-size: 4em;
+    }
+
+    h2 {
+        font-size: 1em;
+    }
+
+    h3 {
+        font-size: 15px;
+    }
+
+    #word-count {
+        font-size: 15px;
+        margin: 12% 0;
+    }
+    
+    #number {
+        font-size: 100px;
+    }
+  }
